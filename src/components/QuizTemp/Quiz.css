@@ -1,0 +1,231 @@
+/* ===========================
+    🌟 AESTHETIC GLOBAL STYLES
+=========================== */
+/* Custom background applied from our previous steps */
+body {
+  min-height: 100vh;
+font-family: 'Kanit', sans-serif;
+  /* Stacking the gradients: the circle light effect is on top of the broader subtle gradient */
+ background-image: 
+    radial-gradient(circle at 30% 70%, rgba(173, 216, 230, 0.35), transparent 60%),
+    radial-gradient(circle at 70% 30%, rgba(255, 182, 193, 0.4), transparent 60%); /* Lighter, cooler background */
+  display: flex; /* Centers the content vertically */
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  /* Increased max-width for better visual presence */
+  max-width: 550px; 
+  /* Changed background to be slightly transparent for depth effect (Glassmorphism hint) */
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 24px; /* More rounded corners */
+  padding: 35px 30px;
+  /* Stronger, layered shadow for a 'floating' look */
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset; /* Subtle inner border/light effect */
+  text-align: center;
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1); /* Smoother transitions */
+  position: relative;
+  z-index: 10;
+}
+
+/* --- App Header/Title --- */
+.app-header {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.app-header h1 {
+    font-size: 1.8rem;
+    font-weight: 800; /* Bold title */
+    color: #2c3e50;
+    margin: 0;
+}
+
+.app-header p {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+
+h2 {
+  color: #334155;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* Increased visibility for the separator line */
+.quiz-separator {
+  border: none;
+  height: 4px;
+  background: linear-gradient(to right, #6366f1, #3b82f6);
+  margin: 15px 0 30px;
+  border-radius: 2px;
+}
+
+/* ===========================
+    🧩 PROFESSION SELECTION & OPTIONS
+=========================== */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  /* Neumorphic/depth button style */
+  background: #f7f9fd; /* Very light background */
+  margin: 12px 0;
+  padding: 15px 20px;
+  border-radius: 16px; 
+  cursor: pointer;
+  font-weight: 500;
+  color: #4b5563;
+  transition: all 0.3s ease;
+  text-align: left;
+  /* Subtle inner shadow for depth */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05), -4px -4px 10px #ffffff;
+}
+
+ul li:hover {
+  background: #e0e7ff; /* Lighter hover state */
+  color: #3b82f6; /* Accent color on hover */
+  transform: translateY(-2px);
+  /* Deeper shadow on hover */
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ===========================
+    ✅ QUIZ OPTIONS: Correct/Wrong States
+=========================== */
+ul li.correct {
+  background-color: #d1fae5;
+  color: #065f46;
+  font-weight: 600;
+  box-shadow: 0 0 0 2px #10b981; /* Stronger correct border */
+  transform: none;
+}
+
+ul li.wrong {
+  background-color: #fee2e2;
+  color: #991b1b;
+  font-weight: 600;
+  box-shadow: 0 0 0 2px #ef4444; /* Stronger wrong border */
+  transform: none;
+}
+
+/* ===========================
+    ⏱️ TIMER & PROGRESS BAR
+=========================== */
+.timer {
+  font-weight: 700;
+  color: #ef4444; /* Use red for urgency */
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  height: 8px; /* Slightly thinner */
+  background: #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.progress {
+  height: 8px;
+  /* More saturated gradient */
+  background: linear-gradient(90deg, #6366f1, #3b82f6);
+  transition: width 0.4s ease-out;
+}
+
+/* ===========================
+    💬 FEEDBACK BOX
+=========================== */
+.feedback-box {
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* ===========================
+    🏅 BADGES & RESULTS
+=========================== */
+.result-box {
+    padding: 20px;
+}
+.result-box h2 {
+    font-size: 2rem;
+    color: #4c1d95;
+}
+
+.badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.badge {
+  background: linear-gradient(135deg, #a5b4fc, #93c5fd);
+  padding: 15px 25px;
+  border-radius: 16px;
+  color: #1e293b;
+  font-weight: 700;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.badge h3 {
+  font-size: 1.4rem;
+}
+
+/* ===========================
+    🔘 BUTTONS (Next/Reset)
+=========================== */
+button {
+  background: linear-gradient(135deg, #6366f1, #3b82f6);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+}
+
+/* ===========================
+    🌈 Responsive Design
+=========================== */
+@media (max-width: 600px) {
+  body {
+      align-items: flex-start;
+  }
+  .container {
+    margin: 20px auto;
+    padding: 25px;
+  }
+
+  .app-header h1 {
+    font-size: 1.6rem;
+  }
+
+  ul li {
+    font-size: 0.95rem;
+    padding: 12px 15px;
+  }
+}
